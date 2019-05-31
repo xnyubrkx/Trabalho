@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+
+int main (){
+
+char lista[99];
+int i,menu1,menu2;
+
+
+printf("***BEM-VINDO AO LISTSUPER***\n\n");
+
+
+// ****Aqui o 1º menu de seleção****//
+
+start:
+printf("Escolha uma opção\n");
+printf("1-inserir novos itens\n2-inserir quantidade\n3-calcular valor\n4-mostrar itens\n\n");
+scanf("%i",&menu1);
+
+
+// ***Aqui e o loop para digitar os itens desejados****//
+
+if (menu1==1){
+   printf("insira os itens\n");
+
+for(i=0;i<99;i++) {
+       scanf("%s",&lista[i]);
+
+
+       printf("deseja inserir novos itens? [1-sim/2-nao]\n");
+       scanf("%i",&menu2);
+
+
+ if (menu2==2) {
+   for(i=0;i<99;i++)
+   printf("\nItens inseridos:\n %c",lista[i]); }
+}
+}
+
+// ***Caso ele não selecione a opção para inserir novos itens aparecera esta mensagem***//
+
+else {
+    printf("Não ha itens inseridos\nEscolha a opção ( inserir novos itens )\n\n");
+    goto start;
+}
+
+//***Apos acabar de digitar os itens mostrar a lista dos itens digitados***//
+
+
+
+
+
+
+
+
+return 0;
+
+
+}
